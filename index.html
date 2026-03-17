@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fox Valley Mall - Wayfinding Kiosk</title>
+    <!-- Cache-busting meta tags -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <link rel="stylesheet" href="styles.css?v=oa123">
+</head>
+<body>
+    <div class="kiosk-container">
+        <header class="oasis-header">
+            <div class="logo">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="leaf-icon">
+                    <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 3.5 1 8a8.5 8.5 0 0 1-5.3 3.8 1.1 1.1 0 0 0-.7 1.1c.4 1.7.3 3.6-1.1 5.1Z"></path>
+                    <path d="M9 22c-1.5-1-1.8-3-1.5-4.5l1.5-1.5"></path>
+                    <path d="M11 20c2 2 2 2 2 2"></path>
+                </svg>
+                <div class="logo-text">
+                    <h1>Fox Valley Mall</h1>
+                    <p>Organic Oasis Wayfinding</p>
+                </div>
+            </div>
+            <div class="weather-time">
+                <span id="current-time">12:45 PM</span>
+                <span id="current-temp">72°F</span>
+            </div>
+        </header>
+
+        <main class="kiosk-main">
+            <aside class="sidebar">
+                <section class="search-section">
+                    <div class="search-bar">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                        <input type="text" id="store-search" placeholder="Search for stores, dining, or amenities...">
+                    </div>
+                </section>
+
+                <nav class="categories">
+                    <button class="category-btn active" data-category="all">All</button>
+                    <button class="category-btn" data-category="jewelry">Jewelry</button>
+                    <button class="category-btn" data-category="fashion">Fashion</button>
+                    <button class="category-btn" data-category="dining">Dining</button>
+                    <button class="category-btn" data-category="services">Services</button>
+                </nav>
+
+                <ul class="store-list" id="store-list">
+                    <!-- Stores will be populated here by JS -->
+                </ul>
+            </aside>
+
+            <section class="map-container">
+                <div id="map-canvas">
+                    <!-- SVG Map will be injected here -->
+                </div>
+                <div class="map-controls">
+                    <button id="zoom-in">+</button>
+                    <button id="zoom-out">-</button>
+                    <button id="reset-map">Reset View</button>
+                </div>
+                <div id="destination-info" class="hidden">
+                    <h3 id="dest-name">Store Name</h3>
+                    <p id="dest-details">Level 1 • Jewelry</p>
+                    <button id="clear-path">Close</button>
+                </div>
+            </section>
+        </main>
+
+        <footer class="oasis-footer">
+            <div class="kiosk-location">
+                <span class="pulse-dot"></span>
+                You are here: <strong>Central Park Fountain</strong>
+            </div>
+            <div class="footer-links">
+                <a href="#">Mall Info</a>
+                <a href="#">Events</a>
+                <a href="#">Restrooms</a>
+                <a href="#">Parking</a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js?v=oa123"></script>
+</body>
+</html>
